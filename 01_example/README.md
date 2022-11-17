@@ -46,3 +46,4 @@ sbatch count-telomeric-seqs.sh SRR9330817
 sbatch count-telomeric-seqs.sh SRR9330816
 ```
 
+![](telomeric-min8x.png)
