@@ -4,6 +4,10 @@ library(data.table)
 library(ggplot2)
 library(foreach)
 library(ggthemes)
+library(showtext)
+
+font_add_google('Atkinson Hyperlegible', 'Atkinson Hyperlegible')
+showtext_auto()
 
 dat <- foreach(file=list.files(pattern='*.telo-counts.txt'), .combine='rbind') %do% {
     sra_id <- strsplit(file, '_')[[1]][1]
@@ -40,4 +44,5 @@ dat[, facetLabel := factor(facetLabel, levels=c('YJM981 x CBS2888','CBS2888 x CL
 
 ggplot(data=dat, aes(x=RPM)) + geom_histogram(bins=80) + theme_few() +
 labs(x='Telomeric Reads per 1M reads', y='N') +
-facet_wrap(~facetLabel, nrow=4)
+facet_wrap(~facetLabel, nrow=4) +
+theme(text=element_text(family="Atkinson Hyperlegible"))
