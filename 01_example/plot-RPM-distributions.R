@@ -42,7 +42,9 @@ dat[, facetLabel := factor(facetLabel, levels=c('YJM981 x CBS2888','CBS2888 x CL
                             'Y10 x PW5','PW5 x 273614','273614 x YJM981'))]
 
 
-ggplot(data=dat, aes(x=RPM)) + geom_histogram(bins=80) + theme_few() +
+g <- ggplot(data=dat, aes(x=RPM)) + geom_histogram(bins=80) + theme_few(12) +
 labs(x='Telomeric Reads per 1M reads', y='N') +
 facet_wrap(~facetLabel, nrow=4) +
-theme(text=element_text(family="Atkinson Hyperlegible"))
+theme(text=element_text(family="Atkinson Hyperlegible", size = 20))
+
+ggsave(g, file='telomeric-min8x.png', width=10, height=8, units='cm', dpi=300, scale=2)
