@@ -1,0 +1,51 @@
+datadir: '/data/SBGE/cory/pacbio'
+gitdir: '/home/wellerca/yeast-telomeres'
+crosses:
+    SRR9330808:
+        - YJM981
+        - CBS2888
+    SRR9330831:
+        - CBS2888
+        - CLIB219
+    SRR9330832:
+        - CLIB219
+        - M22
+    SRR9330811:
+        - M22
+        - BY
+    SRR9330837:
+        - BY
+        - RM
+    SRR9330810:
+        - RM
+        - YPS163
+    SRR9330836:
+        - YPS163
+        - YJM145
+    SRR9330813:
+        - YJM145
+        - CLIB413
+    SRR9330815:
+        - CLIB413
+        - YJM978
+    SRR9330812:
+        - YJM978
+        - YJM454
+    SRR9330833:
+        - YJM454
+        - YPS1009
+    SRR9330814:
+        - YPS1009
+        - I14
+    SRR9330817:
+        - I14
+        - Y10
+    SRR9330816:
+        - Y10
+        - PW5
+    SRR9330830:
+        - PW5
+        - 273614
+    SRR9330809:
+        - 273614
+        - YJM981
